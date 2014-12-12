@@ -21,3 +21,8 @@ Running Ruby
 ============
 
     ruby for.rb
+
+Running Python
+==============
+
+    python for.py
