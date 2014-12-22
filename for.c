@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <time.h>
 
+long func (long a) {
+  return a / 1000;
+}
+
 int main () {
   clock_t start = clock();
 
@@ -8,7 +12,17 @@ int main () {
 
   for (long i = 0; i < 100000000; i++)
   {
-    d += i >> 1;    
+    d += i >> 1;
+
+    if (d % 2 == 0)
+    {
+      d++;
+      d++;
+      d++;
+      d++;
+    }
+
+    d += func(i);
   }
 
   clock_t end = clock();

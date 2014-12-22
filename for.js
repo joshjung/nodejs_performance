@@ -4,9 +4,23 @@ var d = 0.0,
 for (var i = 0; i < 100000000; i++)
 {
   d += i >> 1;
+
+  if (d % 2 == 0)
+  {
+    d++;
+    d++;
+    d++;
+    d++;
+  }
+
+  d+= func(i);
 }
 
 var end = new Date().getTime();
 
 console.log(d);
 console.log(end - start);
+
+function func(a) {
+  return a / 1000;
+}
