@@ -12,6 +12,7 @@ for (var i = 0; i < 100000000; i++)
     d++;
     d++;
     d+=2;
+    d*=1.00000001;
   }
 
   d+= func(i);
@@ -23,5 +24,5 @@ console.log(d);
 console.log((end - start) + ' ms');
 
 function func(a) {
-  return a / 1000;
+  return a / 1000.0;
 }

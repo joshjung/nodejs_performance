@@ -1,5 +1,5 @@
 d = 0.0
-i = 0
+i = 0.0
 s = Time.now
 
 def time_diff_milli(start, finish)
@@ -11,7 +11,7 @@ def func(a)
 end
 
 while i < 100000000 do
-	d += i >> 1
+	d += i.round >> 1
 	i = i + 1
 	if (d % 2 == 0) then
       d = d+1
@@ -19,6 +19,7 @@ while i < 100000000 do
       d = d+1
       d = d+1
       d = d+2
+      d = d * 1.00000001;
     end
     d += func(i)
 end

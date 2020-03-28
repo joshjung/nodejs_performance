@@ -1,26 +1,27 @@
 #include <stdio.h>
 #include <time.h>
 
-long func (long a) {
-  return a / 1000;
+long double func (long double a) {
+  return a / (long double)1000.0;
 }
 
 int main () {
   clock_t start = clock();
 
-  long d = 0.0;
+  long double d = 0.0;
 
-  for (long i = 0; i < 100000000; i++)
+  for (long double i = 0; i < 100000000; i++)
   {
-    d += i >> 1;
+    d += (long double)((long long)i >> 1);
 
-    if (d % 2 == 0)
+    if (((long long)d) % 2 == 0)
     {
       d++;
       d++;
       d++;
       d++;
       d+=2;
+      d*=1.00000001L;
     }
 
     d += func(i);
@@ -29,6 +30,6 @@ int main () {
   clock_t end = clock();
   clock_t elapsed = (end - start) / (CLOCKS_PER_SEC / 1000); 
 
-  printf("%ld\n", d);
+  printf("%Le\n", d);
   printf("%lu ms\n", elapsed);
 }
