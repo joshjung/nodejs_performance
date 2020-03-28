@@ -9,7 +9,7 @@ Running native C (no optimization)
 Running native C (with optimization)
 ====================================
 
-    gcc -Wall -02 for.c
+    gcc -Wall -O2 for.c
     ./a.out
 
 Running Node.JS

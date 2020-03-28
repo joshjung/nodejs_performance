@@ -1,0 +1,32 @@
+----- Node Version -----
+v10.16.0
+----- GCC Version -----
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+----- Python Version -----
+Python 3.8.1
+----- Ruby Version -----
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin18]
+1) C Unoptimized -----
+gcc for.c: 
+2505000200000000
+2316 ms
+2) C Optimized -----
+gcc -Wall -O2 for.c
+2505000200000000
+164 ms
+3) Node -----
+node for.js
+2504999989389827
+1132 ms
+4) Ruby -----
+ruby for.rb
+2.5050003501e+15
+40714.752 ms
+5) Python -----
+python for.py
+2504999999915649.0
+61298 ms

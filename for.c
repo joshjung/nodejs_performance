@@ -20,6 +20,7 @@ int main () {
       d++;
       d++;
       d++;
+      d+=2;
     }
 
     d += func(i);
@@ -29,5 +30,5 @@ int main () {
   clock_t elapsed = (end - start) / (CLOCKS_PER_SEC / 1000); 
 
   printf("%ld\n", d);
-  printf("%lu\n", elapsed);
+  printf("%lu ms\n", elapsed);
 }

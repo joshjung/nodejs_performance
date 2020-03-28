@@ -11,6 +11,7 @@ for (var i = 0; i < 100000000; i++)
     d++;
     d++;
     d++;
+    d+=2;
   }
 
   d+= func(i);
@@ -19,7 +20,7 @@ for (var i = 0; i < 100000000; i++)
 var end = new Date().getTime();
 
 console.log(d);
-console.log(end - start);
+console.log((end - start) + ' ms');
 
 function func(a) {
   return a / 1000;

@@ -14,8 +14,9 @@ while i < 100000000:
     d += 1
     d += 1
     d += 1
+    d += 2
   d += func(i)
 
 e = int(round(time.time() * 1000))
-print d 
-print e - s
+print(d)
+print(str(e - s) + ' ms')
